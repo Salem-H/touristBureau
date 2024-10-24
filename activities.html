@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities in Our Town</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./ActivitiesPage/activities.js"></script>
+    <script src="./scripts/act.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Activities in Our Town</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="hikes.html">Local Hikes</a></li>
+                <li><a href="video.html">Explore Our Area</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+    <h2>Exciting Activities</h2>
+    <label for="category">Select an Activity Category:</label>
+        <select name="category" id="category" onchange="updateActivities()">
+            <option selected> Select One</option>
+            <option value="Adventures"> Adventures</option>
+            <option value="Arts & Crafts"> Arts & Crafts</option>
+            <option value="Museums"> Museums</option>
+            <option value="Wine Tasting"> Wine Tasting</option>
+            <option value="Others"> Others</option>
+        </select>
+        <label for="activity">Select an Activity:</label>
+            <select id="activity" onchange="showActivityDetails()">
+                <option selected>Select one</option>
+            </select>
+
+            <div id="activity-details"></div>
+
+            <form id="purchase-form" style="display: none;" onsubmit="handlePurchase(event)">
+                <h3>Purchase E-Ticket</h3>
+                <label for="ticket-count">Number of Tickets:</label>
+                <input type="number" id="ticket-count" min="1" required>
+
+                <label for="cc-number">Credit Card Number:</label>
+                <input type="text" id="cc-number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+
+                <button type="submit">Buy E-Ticket</button>
+                <button type="reset">Reset</button>
+            </form>
+
+            <div id="message"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Local Visitor's Bureau</p>
+    </footer>
+</body>
+</html>
+<!-- <button><a href="#">Buy E-Ticket</a></button> -->
