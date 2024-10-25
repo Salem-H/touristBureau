@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Hikes</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./HikingPage/hiking.js"></script>
+    <script src="./scripts/hike.js"></script>
 </head>
 <body>
     <header>
@@ -21,12 +23,13 @@
     <main>
         <section>
             <h2>Explore Our Scenic Trails</h2>
-            <p>Details about popular hikes in the area.</p>
-            <ul>
-                <li>Hike 1: Description and distance.</li>
-                <li>Hike 2: Description and distance.</li>
-                <li>Hike 3: Description and distance.</li>
-            </ul>
+            <h3> Details about popular hikes in the area </h3>.
+            <h2>Select a Hike</h2>
+            <select id="hikeSelect">
+                <option selected value="">Select one</option>
+            </select>
+
+            <div id="hikeDiv"></div>
         </section>
     </main>
     <footer>

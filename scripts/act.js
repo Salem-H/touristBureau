@@ -2,7 +2,7 @@
 function updateActivities() {
     const categorySelect = document.getElementById("category");
     const activitySelect = document.getElementById("activity");
-    activitySelect.innerHTML = '<option selected>Select one</option>'; // Reset activity dropdown
+    activitySelect.innerHTML = '<option selected>Select one</option>'; 
 
     const selectedCategory = categorySelect.value;
     if (selectedCategory) {
@@ -34,7 +34,7 @@ function showActivityDetails() {
         `;
 
         purchaseForm.style.display = selectedActivity.price > 0 ? "block" : "none";
-        messageDiv.innerHTML = ""; // Clear previous messages
+        messageDiv.innerHTML = ""; 
     } else {
         detailsDiv.innerHTML = "";
         purchaseForm.style.display = "none";
@@ -52,6 +52,59 @@ function handlePurchase(event) {
     const messageDiv = document.getElementById("message");
     messageDiv.innerHTML = `Your credit card has been charged $${totalAmount} for ${ticketCount} ticket(s) to ${selectedActivity.name}. A confirmation email has been sent to ${email}.`;
 
-    // Reset the form
+   
     document.getElementById("purchase-form").reset();
 }
+
+
+
+// document.addEventListener("DOMContentLoaded", ()=>{
+//     document.body.innerHTML += `
+//     <div> Categories </div>
+//     <select id="cats"></select>
+
+//     <div> Activities </div>
+//     <select id="acts"></select>
+
+//     <div> Details </div>
+//     <table id = "details"> </table>
+//      `
+// })
+
+// for(c of catagories){
+//     cats.appendChild(new Option(c));
+// }
+
+// cats.addEventListener("change", ()=>{
+//     acts.innerHTML = "";
+//     for(a of activities){
+//         if(a.id === a.category){
+//             acts.appendChild(new Option(a.name, a.id));
+//         }
+//     }
+// });
+
+// acts.addEventListener("change", ()=>{
+//     details.innerHTML = "";
+//     for(a of activities){
+//     if(a.id === acts.value){
+//         for(prop in a){
+//             let value = a[prop];
+//             details.innerHTML +=`
+//             <tr>
+//             <th> ${prop} </th>
+//             <td> ${value} </td>
+//             </tr>
+//             `;
+//         }
+//     }
+//   }
+// })
+
+// document.addEventListener("DOMContentLoaded", ()=>{
+    
+
+//     for(c of categories){
+//         document.body.innerHTML += ;
+//     }
+// });
